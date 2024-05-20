@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-// Components
 import Cart from "../cart/index";
 
-// Styles
 import * as Styles from "./styles";
 
-// Utilities
 import { loginUser, logoutUser } from "../../redux/user/actions";
 
 function Header() {
@@ -16,13 +13,15 @@ function Header() {
   const dispatch = useDispatch();
 
   const { currentUser } = useSelector((state) => state.userReducer);
+  // console.log(currentUser)
+
 
   const handleCartClick = () => {
     setCartIsVisible(true);
   };
 
   const handleLoginClick = () => {
-    dispatch(loginUser({ name: "Felipe Rocha", email: "felipe@rocha.com" }));
+    dispatch(loginUser({ name: "Joao Lara", email: "joao@lara.com" }));
   };
 
   const handleLogoutClick = () => {
